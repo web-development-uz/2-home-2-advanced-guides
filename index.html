@@ -1,0 +1,118 @@
+<html>
+<title>Advanced Guides</title>
+<body>
+ <h1>Advanced Guides | Accessibility</h1>
+ <h2>Why Accessibility?</h2>
+ <p>Web accessibility (also referred to as a11y) is the design and <b>creation of websites</b> that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.</p>
+ <p>React fully supports building accessible websites, often by using standard <abbr title="hypertext markup langauge">HTML</abbr> techniques</p>
+ <br/>
+ <hr/>
+ <br/>
+ <h2>Standards and Guidelines</h2>
+ <h4>WCAG</h4>
+ <p>The <mark>Web Content Accessibility Guidelines</mark> provides guidelines for creating accessible web sites.</p>
+ <p>The following WCAG checklists provide an overview:</p>
+ <ul>
+  <li>WCAG checklist from Wuhcag</li>
+  <li>WCAG checklist from WebAIM</li>
+  <li>Checklist from The A11Y Project</li>
+ </ul>
+ <h4>WAI-ARIA</h4>
+ <p>The Web Accessibility <sup>Initiative - Accessible Rich Internet Applications</p> document contains techniques for building fully accessible JavaScript <mark>widgets</mark>.</p>
+ <p>Note that all <b>aria-* HTML attributes</b> are fully supported in JSX. Whereas most DOM properties and attributes in React<sup>2222</sup> are camelCased, these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc) as they are in plain HTML:</p>
+ <h4>Accessible Forms</h4>
+ <h5>Labeling</h5>
+ <p>Every HTML form control, such as <mark>input</mark> and <mark>textarea</mark>, needs to be labeled accessibly. We need to provide descriptive labels that are also exposed to screen readers.</p>
+ <p>The following resources show us how to do this:</p>
+ <ol>
+  <li>The W3C shows us how to label elements</li>
+  <li>WebAIM shows us how to label elements</li>
+  <li>The Paciello Group explains accessible names</li>
+ </ol>
+ <h4>More Complex Widgets</h4>
+ <p>A more complex user experience should not mean a less accessible one. Whereas accessibility is most easily achieved by coding as close to HTML as possible, even the most complex widget can be coded accessibly.</p>
+ <p>Here we require knowledge of <mark>ARIA Roles</mark> as well as <mark>ARIA States</mark> and Properties. These are toolboxes filled with HTML attributes that are fully supported in JSX and enable us to construct fully accessible, highly functional React components.</p>
+ <p>Each type of widget has a specific design pattern and is expected to function in a certain way by users and user agents alike:</p>
+ <dl>
+  <dt>WAI-ARIA Authoring Practices </dt>
+  <dd>Design Patterns and Widgets. Describe the <sub>current page content</sub> as this ensures that the user remains <sup>aware of the current</sup> page context</dd>
+  <dt>Heydon Pickering</dt>
+  <dd>Ensure that all readable text on your website has sufficient color contrast <mark>to remain maximally readable</mark> <i>by users with</i> low vision</dd>
+  <dt>Inclusive Components</dt>
+  <dd>Both the aXe and <b>WAVE tools mentioned below</b> also include color contrast tests and will report on contrast errors</dd>
+ </dl>
+ <hr/>
+ <h3>Development and Testing Tools</h3>
+ <p>There are a number of tools we can use to assist in the creation of accessible web applications.</p>
+ <br/>
+ <h4>The keyboard</h4>
+ <p>By far the easiest and also one of the most important checks is to test if your entire website can be reached and used with the keyboard alone. Do this by:</p>
+ <ol>
+   <li>Disconnecting your mouse.
+      <ul>
+         <li>
+           We can check some accessibility
+           <ol>
+             <li>Features directly in our JSX code.</li>
+             <li>Often intellisense checks are already</li>
+             <li>Provided in JSX aware IDE’s</li>
+           </ol>  
+         </li>
+         <li>
+           For the ARIA roles, states and properties
+           <ul> 
+             <li>The eslint-plugin-jsx-a11y plugin for ESLint</li>
+             <li>Provides AST linting feedback regarding accessibility</li>
+             <li>Issues in your JSX. Many <abbr title="integrated developement environment">IDE’s</abbr>
+             <ol>
+                <li>Allow you to integrate these findings</li>
+                <li>Directly into code analysis and source code windows.</li>
+                <li>Create React App has this plugin</li>
+             </ol>
+            </li>
+           </ul>
+         </li>
+	 <li>If you want to enable even more accessibility rules, you can create</li>
+         <li>If you want to enable even more accessibility rules,</li>
+      </ul>
+   </li>
+   <li>Using Tab and Shift+Tab to browse.
+   <ol>
+     <li>
+       Deque Systems offers 
+       <ol>
+         <li>Automated and end-to-end</li>
+         <li>
+	    Accessibility tests of your applications. 
+           <ul>
+             <li>This module includes integrations for Selenium.</li>
+             <li>The Accessibility Engine or aXe, is an accessibility inspector</li>
+             <li>
+               You can also use the react-axe module to report these accessibility
+               <ol>
+                 <li>Findings directly to the console while developing and debugging.</li>
+                 <li>The Web Accessibility Evaluation Tool is another accessibility browser extension.</li>
+                 <li>
+		    Accessibility inspectors and the Accessibility Tree
+                    <ul>
+                     <li>The Accessibility Tree is a subset of the DOM tree that contains accessible objects for every DOM</li>
+                     <li>Element that should be exposed to assistive technology, such as screen readers.</li>
+                     <li>Testing with a screen reader should form part of your accessibility tests.</li>
+                     <li> It is recommended that you test your application in the browser best suited to your screen reader of choice.</li>
+                    </ul>
+                 </li>
+               </ol> 
+           </ul>
+         </li>
+         <li>ChromeVox in Google Chrome</li>
+       </ol>
+     </li>
+     <li>Refer to the following guides on how to best use JAWS</li>
+     <li>Job Access With Speech or JAWS, is a prolifically used screen reader on Windows.</li>
+   </ol>
+   </li>
+   <li>Using Enter to activate elements.</li>
+   <li>Where required, using your keyboard arrow keys to interact with some elements, such as menus and dropdowns.</li>
+ </ol>  
+</body>
+</html>
